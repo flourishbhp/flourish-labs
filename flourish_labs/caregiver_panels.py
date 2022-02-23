@@ -38,4 +38,4 @@ caregiver_lab_profile.add_panel(cd4_panel)
 caregiver_lab_profile.add_panel(hematology_panel)
 caregiver_lab_profile.add_panel(cbc_panel)
 
-site_labs.register(caregiver_lab_profile)
+site_labs.register(caregiver_lab_profile, )
