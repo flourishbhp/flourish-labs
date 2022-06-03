@@ -17,9 +17,7 @@ dna_pcr_processing = ProcessingProfile(name='dna_pcr', aliquot_type=dna_pcr)
 
 stool_sample_processing = ProcessingProfile(name='stool_sample', aliquot_type=ss)
 
-infant_pbmc_plasma_processing = ProcessingProfile(
-    name='pbmc_plasma_store', aliquot_type=wb)
+infant_plasma_cykotines_processing = ProcessingProfile(
+    name='plasma_cykotines_store', aliquot_type=wb)
 pl_plasma_process = Process(aliquot_type=pl, aliquot_count=4)
 pbmc_plasma_process = Process(aliquot_type=pbmc, aliquot_count=4)
-infant_pbmc_plasma_processing.add_processes(
-    pl_plasma_process, pbmc_plasma_process)
