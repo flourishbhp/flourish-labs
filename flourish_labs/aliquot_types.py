@@ -12,4 +12,6 @@ dna_pcr = AliquotType(name='DNA PCR', alpha_code='DP', numeric_code='50')
 
 pbmc = AliquotType(name='PBMC', alpha_code='PBMC', numeric_code='31')
 
+rs = AliquotType(name='Rectal Swab', alpha_code='RS', numeric_code='61')
+
 wb.add_derivatives(bc, pl, wb, pbmc)
