@@ -23,3 +23,15 @@ infant_plasma_cykotines_processing = ProcessingProfile(
     name='plasma_cykotines_store', aliquot_type=wb)
 pl_plasma_process = Process(aliquot_type=pl, aliquot_count=4)
 pbmc_plasma_process = Process(aliquot_type=pbmc, aliquot_count=4)
+
+glucose_processing = ProcessingProfile(name='glucose', aliquot_type=wb)
+glucose_pl_process = Process(aliquot_type=pl, aliquot_count=3)
+glucose_processing.add_processes(glucose_pl_process)
+
+insulin_processing = ProcessingProfile(name='insulin', aliquot_type=wb)
+
+lipids_processing = ProcessingProfile(name='lipids', aliquot_type=wb)
+
+lead_processing = ProcessingProfile(name='lead_levels', aliquot_type=wb)
+
+anemia_processing = ProcessingProfile(name='anemia', aliquot_type=wb)
