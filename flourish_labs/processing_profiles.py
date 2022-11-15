@@ -30,8 +30,8 @@ glucose_processing.add_processes(glucose_pl_process)
 
 insulin_processing = ProcessingProfile(name='insulin', aliquot_type=wb)
 
-lipids_processing = ProcessingProfile(name='lipids', aliquot_type=wb)
+chemistry_processing = ProcessingProfile(name='chemistry', aliquot_type=wb)
 
 lead_processing = ProcessingProfile(name='lead_levels', aliquot_type=wb)
 
-anemia_processing = ProcessingProfile(name='anemia', aliquot_type=wb)
+fbc_processing = ProcessingProfile(name='fbc', aliquot_type=wb)
