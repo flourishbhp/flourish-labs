@@ -75,7 +75,7 @@ serum_panel = RequisitionPanel(
 
 child_pl_store_panel = RequisitionPanel(
     name='child_pl_store',
-    verbose_name='PBMC Plasma (STORE ONLY)',
+    verbose_name='Plasma Storage',
     aliquot_type=wb,
     processing_profile=child_plasma_processing)
 
