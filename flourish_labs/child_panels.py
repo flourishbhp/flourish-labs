@@ -6,6 +6,7 @@ from .processing_profiles import chemistry_processing, lead_processing, fbc_proc
 from .processing_profiles import dna_pcr_processing, stool_sample_processing
 from .processing_profiles import glucose_processing, insulin_processing
 from .processing_profiles import infant_plasma_cykotines_processing, rectal_swab_processing
+from .processing_profiles import infant_serum_processing, child_plasma_processing
 
 child_lab_profile = LabProfile(
     name='flourish_child_lab_profile',
@@ -56,7 +57,7 @@ chemistry_panel = RequisitionPanel(
 
 lead_panel = RequisitionPanel(
     name='lead_level',
-    verbose_name='Lead Levels',
+    verbose_name='Lead',
     aliquot_type=wb,
     processing_profile=lead_processing)
 
@@ -65,6 +66,18 @@ fbc_panel = RequisitionPanel(
     verbose_name='FBC',
     aliquot_type=wb,
     processing_profile=fbc_processing)
+
+serum_panel = RequisitionPanel(
+    name='serum_storage',
+    verbose_name='Infant Serum (Store Only)',
+    aliquot_type=wb,
+    processing_profile=infant_serum_processing)
+
+child_pl_store_panel = RequisitionPanel(
+    name='child_pl_store',
+    verbose_name='PBMC Plasma (STORE ONLY)',
+    aliquot_type=wb,
+    processing_profile=child_plasma_processing)
 
 child_lab_profile.add_panel(dna_pcr_panel)
 child_lab_profile.add_panel(stool_sample_panel)
@@ -75,5 +88,7 @@ child_lab_profile.add_panel(fasting_insulin_panel)
 child_lab_profile.add_panel(chemistry_panel)
 child_lab_profile.add_panel(lead_panel)
 child_lab_profile.add_panel(fbc_panel)
+child_lab_profile.add_panel(serum_panel)
+child_lab_profile.add_panel(child_pl_store_panel)
 
 site_labs.register(child_lab_profile,)

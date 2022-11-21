@@ -1,6 +1,6 @@
 from edc_lab import Process, ProcessingProfile
 
-from .aliquot_types import wb, pl, bc, dna_pcr, ss, pbmc, rs
+from .aliquot_types import wb, pl, bc, dna_pcr, ss, pbmc, rs, serum
 
 viral_load_processing = ProcessingProfile(name='viral_load', aliquot_type=wb)
 vl_pl_process = Process(aliquot_type=pl, aliquot_count=3)
@@ -24,6 +24,13 @@ infant_plasma_cykotines_processing = ProcessingProfile(
 pl_plasma_process = Process(aliquot_type=pl, aliquot_count=4)
 pbmc_plasma_process = Process(aliquot_type=pbmc, aliquot_count=4)
 
+child_plasma_processing = ProcessingProfile(
+    name='plasma_store', aliquot_type=wb)
+pl_plasma_process = Process(aliquot_type=pl, aliquot_count=4)
+pbmc_plasma_process = Process(aliquot_type=pbmc, aliquot_count=4)
+child_plasma_processing.add_processes(
+    pl_plasma_process, pbmc_plasma_process)
+
 glucose_processing = ProcessingProfile(name='glucose', aliquot_type=wb)
 glucose_pl_process = Process(aliquot_type=pl, aliquot_count=3)
 glucose_processing.add_processes(glucose_pl_process)
@@ -35,3 +42,7 @@ chemistry_processing = ProcessingProfile(name='chemistry', aliquot_type=wb)
 lead_processing = ProcessingProfile(name='lead_levels', aliquot_type=wb)
 
 fbc_processing = ProcessingProfile(name='fbc', aliquot_type=wb)
+
+infant_serum_processing = ProcessingProfile(name='serum', aliquot_type=wb)
+infant_serum_process = Process(aliquot_type=serum, aliquot_count=1)
+infant_serum_processing.add_processes(infant_serum_process)

@@ -14,4 +14,6 @@ pbmc = AliquotType(name='PBMC', alpha_code='PBMC', numeric_code='31')
 
 rs = AliquotType(name='Rectal Swab', alpha_code='RS', numeric_code='61')
 
-wb.add_derivatives(bc, pl, wb, pbmc)
+serum = AliquotType(name='Serum', alpha_code='SERUM', numeric_code='06')
+
+wb.add_derivatives(bc, pl, wb, pbmc, serum)
