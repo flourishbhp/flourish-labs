@@ -6,7 +6,7 @@ from .processing_profiles import chemistry_processing, lead_processing, fbc_proc
 from .processing_profiles import dna_pcr_processing, stool_sample_processing
 from .processing_profiles import glucose_processing, insulin_processing
 from .processing_profiles import infant_plasma_cykotines_processing, rectal_swab_processing
-from .processing_profiles import infant_serum_processing, child_plasma_processing
+from .processing_profiles import infant_serum_processing, child_plasma_processing, lithium_heparin_processing
 
 child_lab_profile = LabProfile(
     name='flourish_child_lab_profile',
@@ -79,6 +79,13 @@ child_pl_store_panel = RequisitionPanel(
     aliquot_type=wb,
     processing_profile=child_plasma_processing)
 
+lithium_heparin_panel = RequisitionPanel(
+    name='lithium_heparin',
+    verbose_name='Quantiferon',
+    aliquot_type=wb,
+    processing_profile=lithium_heparin_processing
+)
+
 child_lab_profile.add_panel(dna_pcr_panel)
 child_lab_profile.add_panel(stool_sample_panel)
 child_lab_profile.add_panel(infant_pl_cytokines_panel)
@@ -90,5 +97,6 @@ child_lab_profile.add_panel(lead_panel)
 child_lab_profile.add_panel(fbc_panel)
 child_lab_profile.add_panel(serum_panel)
 child_lab_profile.add_panel(child_pl_store_panel)
+child_lab_profile.add_panel(lithium_heparin_panel)
 
 site_labs.register(child_lab_profile,)
