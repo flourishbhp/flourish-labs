@@ -16,4 +16,6 @@ rs = AliquotType(name='Rectal Swab', alpha_code='RS', numeric_code='61')
 
 serum = AliquotType(name='Serum', alpha_code='SERUM', numeric_code='06')
 
-wb.add_derivatives(bc, pl, wb, pbmc, serum)
+lithium_heparin = AliquotType('Lithium Heparin', alpha_code='IGRA', numeric_code='06')
+
+wb.add_derivatives(bc, pl, wb, pbmc, serum, lithium_heparin)
