@@ -81,7 +81,7 @@ child_pl_store_panel = RequisitionPanel(
 
 lithium_heparin_panel = RequisitionPanel(
     name='lithium_heparin',
-    verbose_name='QuantiFERON Requisition Form',
+    verbose_name='QuantiFERON',
     aliquot_type=wb,
     processing_profile=lithium_heparin_processing
 )
