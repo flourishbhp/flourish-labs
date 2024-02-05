@@ -16,6 +16,11 @@ rs = AliquotType(name='Rectal Swab', alpha_code='RS', numeric_code='61')
 
 serum = AliquotType(name='Serum', alpha_code='SERUM', numeric_code='06')
 
-lithium_heparin = AliquotType('Lithium Heparin', alpha_code='IGRA', numeric_code='06')
+lithium_heparin = AliquotType(
+    'Lithium Heparin', alpha_code='IGRA', numeric_code='06')
 
-wb.add_derivatives(bc, pl, wb, pbmc, serum, lithium_heparin)
+breast_milk_pellet = AliquotType(
+    'Breast milk pellet', alpha_code='BMP', numeric_code='18')
+
+wb.add_derivatives(bc, pl, wb, pbmc, serum,
+                   lithium_heparin, breast_milk_pellet)

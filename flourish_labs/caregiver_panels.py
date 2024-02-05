@@ -1,9 +1,11 @@
 from edc_lab import RequisitionPanel, LabProfile
 from edc_lab.site_labs import site_labs
 
-from .aliquot_types import wb
+from .aliquot_types import wb, breast_milk_pellet
 from .processing_profiles import cbc_processing
-from .processing_profiles import viral_load_processing, cd4_processing, hematology_processing
+from .processing_profiles import (
+    viral_load_processing, cd4_processing,
+    hematology_processing, breast_milk_pellet_processing)
 
 caregiver_lab_profile = LabProfile(
     name='flourish_caregiver_lab_profile',
@@ -33,9 +35,17 @@ cbc_panel = RequisitionPanel(
     aliquot_type=wb,
     processing_profile=cbc_processing)
 
+breast_milk_pellet_panel = RequisitionPanel(
+    name='breast_milk_pellet',
+    verbose_name='Breast milk pellet',
+    aliquot_type=breast_milk_pellet,
+    processing_profile=breast_milk_pellet_processing)
+
+
 caregiver_lab_profile.add_panel(viral_load_panel)
 caregiver_lab_profile.add_panel(cd4_panel)
 caregiver_lab_profile.add_panel(hematology_panel)
 caregiver_lab_profile.add_panel(cbc_panel)
+caregiver_lab_profile.add_panel(breast_milk_pellet_panel)
 
 site_labs.register(caregiver_lab_profile,)
