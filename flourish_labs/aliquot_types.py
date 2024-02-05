@@ -23,4 +23,4 @@ breast_milk_pellet = AliquotType(
     'Breast milk pellet', alpha_code='BMP', numeric_code='18')
 
 wb.add_derivatives(bc, pl, wb, pbmc, serum,
-                   lithium_heparin, breast_milk_pellet)
+                   lithium_heparin)

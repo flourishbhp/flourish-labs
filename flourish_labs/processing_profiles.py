@@ -61,6 +61,3 @@ lithium_heparin_processing.add_processes(lithium_heparin_process)
 
 breast_milk_pellet_processing = ProcessingProfile(
     name='breast_milk_pellet', aliquot_type=breast_milk_pellet)
-breast_milk_pellet_process = Process(
-    aliquot_type=breast_milk_pellet, aliquot_count=1)
-breast_milk_pellet_processing.add_processes(breast_milk_pellet_process)
