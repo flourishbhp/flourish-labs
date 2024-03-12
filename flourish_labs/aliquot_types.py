@@ -18,4 +18,6 @@ serum = AliquotType(name='Serum', alpha_code='SERUM', numeric_code='06')
 
 lithium_heparin = AliquotType('Lithium Heparin', alpha_code='IGRA', numeric_code='06')
 
+breast_milk = AliquotType('Breast Milk', alpha_code='BM', numeric_code='20')
+
 wb.add_derivatives(bc, pl, wb, pbmc, serum, lithium_heparin)
